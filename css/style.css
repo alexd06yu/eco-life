@@ -1,0 +1,272 @@
+/* 
+    style.css
+    Eco-Life website styling file
+    Theme: Nature & Sustainability
+*/
+
+:root {
+    --deep-forest-green: #091008;
+    --dark-moss-green: #1f2f22;
+    --sagebrush-green: #3e563e;
+    --soft-olive-green: #93a889;
+    --cool-slate-blue: #7993a0;
+    --light-powder-blue: #ced9df;
+    --light-powder-green: #d1e4d1;
+    --almost-white-green: #e3f0e2;
+}
+
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--light-powder-green); /* light, nature-inspired background */
+    padding: 0px;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.element {
+    animation: fadeIn 2s cubic-bezier(0.22, 1.61, 0.36, 1); /* Custom bezier for logarithmic effect */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 15px;
+    color: var(--dark-moss-green);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+p {
+    color: var(--deep-forest-green);
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin: 10px 0 15px 20px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--sagebrush-green);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: var(--almost-white-green);
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--dark-moss-green);
+}
+
+/* Header & Main Layout */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--deep-forest-green);
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--light-powder-green);
+}
+
+footer a {
+    color: var(--dark-moss-green);
+    text-decoration: underline;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    color: var(--deep-forest-green);
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form-section-block {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="radio"],
+form input[type="checkbox"] {
+    display: inline-block;
+}
+
+form input[type="submit"] {
+    background-color: var(--dark-moss-green);
+    color: var(--almost-white-green);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--sagebrush-green);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+table th,
+table td {
+    border: none;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--sagebrush-green);
+    color: var(--almost-white-green);
+}
+
+/* Images & Media */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+iframe {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Gallery & Responsive Boxes (e.g., in Resources Page) */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 31.33%;
+    margin: 1%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.responsive:hover {
+    transform: scale(1.05);
+}
+
+.gallery {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery .desc {
+    padding: 15px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .responsive {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    .responsive {
+        width: 98%;
+        margin: 1% 0;
+    }
+}
