@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -11,6 +11,7 @@
             <a href="resources.html">Resources</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact Us</a>
+            <a href="tracker.html">Eco Tracker</a>
         </nav>
         <header>
             <h1>Eco-Life</h1>
@@ -19,7 +20,7 @@
         
         <main>
             <!-- Email Sign-Up Form -->
-            <form action="#" method="post">
+            <form onsubmit="newsletterSubmit(event)">
                 <legend>
                     <h4>
                         Get Newsletter
@@ -27,19 +28,19 @@
                 </legend>
                 <div class="form-section-block">
                     <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" id="fname" name="fname" required>
 
                     <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname">
+                    <input type="text" id="lname" name="lname" required>
 
                     <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
 
                     <label for="address">Address:</label>
-                    <input type="text" id="address" name="address">
+                    <input type="text" id="address" name="address" required>
 
                     <label for="province">Province:</label>
-                    <select id="province" name="province">
+                    <select id="province" name="province" required>
                         <option value="">Select Province</option>
                         <option value="AB">Alberta</option>
                         <option value="BC">British Columbia</option>
@@ -56,7 +57,7 @@
                         <option value="YT">Yukon</option>
                     </select>
                 </div>
-                <input type="checkbox" id="robot" name="robot">
+                <input type="checkbox" id="robot" name="robot" required>
                 <label for="robot">I am not a robot</label>
 
                 <br><br>
@@ -70,7 +71,10 @@
                 <label for="activism">Environmental activism</label><br><br>
 
                 <input type="submit" value="Sign Up">
-
+                <div id="message-div">
+                    <br>
+                    <p id="submission-message"></p>
+                </div>
             </form>
 
             <h3>What is the eco-life?</h3>
@@ -137,5 +141,6 @@
                 Each section is crafted to help you learn, implement, and share sustainable practices in your everyday life.
             </p>
         </main>
+        <script src="js/app.js"></script>
     </body>
 </html>

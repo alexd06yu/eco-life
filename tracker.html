@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>Eco Tracker</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a class="active" href="tracker.html">Eco Tracker</a>
+        </nav>
+        <header>
+            <h1>Eco Tracker</h1>
+            <p><i>A guide to living sustainably</i></p>
+        </header>
+        <main>
+            <form action="#" method="post" onsubmit="trackerSubmit(event)">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <label for="electricity">Electricity Consumption (kWh):</label>
+                <input type="electricity" id="electricity" name="electricity" min="0" required><br><br>
+
+                <label for="gasoline">Gasoline Consumption (L):</label>
+                <input type="gasoline" id="gasoline" name="gasoline" min="0" required><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="tracked-items"></div>
+        </main>
+        <script src="js/app.js"></script>
+    </body>
+</html>

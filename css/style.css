@@ -31,7 +31,7 @@ body {
     animation: fadeIn 1s ease-in;
 }
 
-/* Fade-in Animation */
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -42,7 +42,20 @@ body {
 }
 
 .element {
-    animation: fadeIn 2s cubic-bezier(0.22, 1.61, 0.36, 1); /* Custom bezier for logarithmic effect */
+    animation: fadeIn 1s cubic-bezier(0.22, 1.61, 0.36, 1);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s cubic-bezier(0.22, 1.61, 0.36, 1);
 }
 
 /* Typography */
@@ -111,7 +124,8 @@ header p {
     margin-left: 10%;
     margin-right: 10%;
 }
-main {
+
+main, .tracked-item {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px;
@@ -133,7 +147,7 @@ footer a {
 }
 
 /* Form Styling */
-form {
+form, .tracked-item {
     background-color: white;
     color: var(--deep-forest-green);
     border: none;
@@ -177,6 +191,9 @@ form input[type="submit"]:hover {
     background-color: var(--sagebrush-green);
 }
 
+#message-div {
+    display: none;
+}
 /* Table Styling */
 table {
     width: 100%;
